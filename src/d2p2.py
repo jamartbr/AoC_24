@@ -1,6 +1,3 @@
-import re
-import numpy as np
-
 def check_line(line):
     safe = True
     sube = line[0] < line[1]
