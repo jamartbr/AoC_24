@@ -10,6 +10,6 @@ def check_line(line):
 suma1, suma2 = 0, 0
 for line in data:
     suma1 += check_line(line)
-    suma2 += any([check_line([line[j] for j in range(len(line)) if j != i]) for i in range(len(line))])
+    suma2 += any([check_line(line[:i]+line[i+1:]) for i in range(len(line))])
 
 print(suma1, suma2)
