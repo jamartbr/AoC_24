@@ -9,7 +9,9 @@ def check_line(line):
 
 suma1, suma2 = 0, 0
 for line in data:
+    # Parte 1
     suma1 += check_line(line)
+    # Parte 2
     suma2 += any([check_line(line[:i]+line[i+1:]) for i in range(len(line))])
 
 print(suma1, suma2)
